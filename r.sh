@@ -3,5 +3,5 @@
 #Reset de la BDD et relance les migrations
 rake db:migrate:reset
 
-#Vu que la BDD est vid, on relance les seeds
+#Vu que la BDD est vide, on relance les seeds
 rake db:seed
