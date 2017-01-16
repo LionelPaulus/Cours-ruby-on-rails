@@ -11,15 +11,22 @@
 #   puts "Creating article #{i}"
 # end
 
-5.times do |i|
-  puts "Creating Chapter #{i}"
-  chapter = Chapter.create({
-    title: "Chapitre numéro #{i}",
+3.times do |a|
+  main_chapter = Chapter.create({
+    title: "Grand chapitre #{a}",
     published_at: Time.now
   })
 
-  10.times do |j|
-    #Création d'un article
-    chapter.articles.create({content: "Contenu de l'article #{j} pour le chapitre #{i}"})
+  5.times do |i|
+    puts "  Creating Chapter #{i}"
+    chapter = main_chapter.children.create({
+      title: "Chapitre numéro #{i}",
+      published_at: Time.now
+    })
+
+    10.times do |j|
+      #Création d'un article
+      chapter.articles.create({content: "  Contenu de l'article #{j} pour le chapitre #{i}"})
+    end
   end
 end

@@ -25,10 +25,9 @@ ActiveRecord::Schema.define(version: 20170116094900) do
   create_table "chapters", force: :cascade do |t|
     t.string   "title"
     t.datetime "published_at"
-    t.integer  "chapter_id"
+    t.integer  "parent_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.index ["chapter_id"], name: "index_chapters_on_chapter_id"
   end
 
 end
