@@ -1,1 +1,13 @@
 <h2><%= chapter.title  %></h2>
+
+<table>
+  <thead>
+    <tr>
+      <td>#</td>
+      <td>Title</td>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render chapter.articles %>    
+  </tbody>
+</table>
