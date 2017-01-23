@@ -32,8 +32,7 @@ presentation = Chapter.create({
 })
 
 introduction = Chapter.create({
-    title: "Introduction",
-    published_at: Time.zone.now
+    title: "Introduction"
 })
 
 rvm = introduction.children.create({
