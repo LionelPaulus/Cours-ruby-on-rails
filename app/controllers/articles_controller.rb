@@ -6,6 +6,10 @@ class ArticlesController < ApplicationController
   #   @articles = Article.all
   # end
 
+  def show
+    @article.increment!(:views_count, 1)
+  end
+
   private
     def fetch_article
       @article = Article.published.find(params[:id])

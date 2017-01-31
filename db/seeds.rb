@@ -59,3 +59,5 @@ introduction.children.create({
   title: "Initialisation des dépendances",
   published_at: Time.zone.now
 })
+
+Article.update_all(published_at: Time.zone.now)
